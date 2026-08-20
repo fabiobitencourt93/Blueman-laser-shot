@@ -21,7 +21,7 @@
     <div class="overlay" *ngIf="!running || paused || won">
       <div class="panel">
         <span class="badge">{{ won ? 'VITÓRIA' : paused ? 'PAUSADO' : 'MISSÃO' }}</span>
-        <h2>{{ won ? 'MÁQUINA DESATIVADA' : message }}</h2>
+        <h2>{{ won ? 'YOU WIN!' : message }}</h2>
         <p *ngIf="!won">Percorra as duas fases, derrote os drones e alcance a bandeira.</p>
         <div class="actions">
           <button class="primary" (click)="won ? restart() : (paused ? togglePause() : start())">
@@ -41,7 +41,7 @@
   </section>
 
   <footer>
-    <div><b>Objetivo:</b> chegar à bandeira no final de cada fase.</div>
+    <div><b>Objetivo:</b> Chegue ate o fim do cenário!</div>
     <div><b>Fase {{levelIndex + 1}}:</b> {{level?.name}}</div>
   </footer>
 </main>
