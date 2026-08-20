@@ -9,6 +9,7 @@ type Level = { name:string; sky:string; floor:number; platforms:Rect[]; enemies:
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
